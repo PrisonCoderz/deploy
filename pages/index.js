@@ -7,7 +7,7 @@ const Home = () => {
             style={{ width: "100%", height: "100vh" }}
         >
             <Link href="/shop" id="link">
-                Shop Page
+                Shop Page Update
             </Link>
         </div>
     )
