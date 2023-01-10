@@ -1,14 +1,9 @@
 import React from 'react'
-import {useRouter,withRouter} from 'next/router'
-import Router from 'next/router';
+import {withRouter} from 'next/router'
 
 const SinglePage = ({router}) => {
-    const router = useRouter();
-    // console.log(router)
     const {slug,img} = router.query;
     const redirect=()=>{
-        // router.push("/shop")
-        // Router.push("/shop")
         router.push({
             pathname:"/shop",
             query:{message:"redirect-from-single-page"}
