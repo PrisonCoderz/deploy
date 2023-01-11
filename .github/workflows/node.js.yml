@@ -41,8 +41,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: | 
-        npm ci --force
-        npm run dev
+        npm ci
+        npm run build
         pm2 stop npm
         pm2 start npm -- start
         echo "$APP_NAME"
