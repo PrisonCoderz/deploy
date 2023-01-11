@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { PASSWORD } from '../config'
+// import { PASSWORD } from '../config'
 // import getConfig from 'next/config'
 const Home = () => {
     // const { publicRuntimeConfig } = getConfig()
     console.log(process.env.NEXT_PUBLIC_APP_NAME)
-    console.log(PASSWORD)
+    // console.log(PASSWORD)
     // console.log(publicRuntimeConfig.PASSWORD)
     return (
         <div className='d-flex justify-content-center align-items-center'
