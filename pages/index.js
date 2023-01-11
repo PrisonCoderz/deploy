@@ -7,8 +7,7 @@ const Home = () => {
             style={{ width: "100%", height: "100vh" }}
         >
             <Link href="/shop" id="link">
-                Shop Page working
-                {/* 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 */}
+                Shop Page workingssss
             </Link>
         </div>
     )
