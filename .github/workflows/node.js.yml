@@ -41,7 +41,7 @@ jobs:
         cache: 'npm'
     - run: | 
         # npm ci --force
-         npm run dev
+        npm run dev
         # pm2 stop npm
         # pm2 start npm -- start
         echo "$APP_NAME"
