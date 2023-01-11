@@ -35,7 +35,9 @@ jobs:
       #   key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
       #   # If source files changed but packages didn't, rebuild from a prior cache.
       #   restore-keys: |
-      #     ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+      #     ${{ runner.os }}-nextjs-${{ hashFi
+        echo "$NEXT_PUBLIC_APP_NAME"
+        echo "$NEXT_PUBLIC_PASSWORD"les('**/package-lock.json') }}-
 
       with:
         node-version: ${{ matrix.node-version }}
