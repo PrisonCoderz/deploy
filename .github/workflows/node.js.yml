@@ -9,10 +9,9 @@ on:
 
 jobs:
   build:
-    environment:testing
+    environment: testing
     env:
       APP_NAME:${{secrets.APP_NAME}} 
-    run: echo "${APP_NAME}"
 
     runs-on: self-hosted
 
@@ -33,4 +32,4 @@ jobs:
         npm run build
         pm2 stop npm
         pm2 start npm -- start
-    
+        echo "${APP_NAME}"
