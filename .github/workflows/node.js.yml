@@ -9,6 +9,10 @@ on:
 
 jobs:
   build:
+    environment:testing
+    env:
+      APP_NAME:${{secrets.APP_NAME}} 
+    run: echo "${APP_NAME}"
 
     runs-on: self-hosted
 

@@ -8,6 +8,7 @@ const Home = () => {
         >
             <Link href="/shop" id="link">
                 Shop Page
+                {process.env.APP_NAME}
             </Link>
         </div>
     )
