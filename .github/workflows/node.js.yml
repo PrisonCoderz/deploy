@@ -10,9 +10,9 @@ on:
 jobs:
   build:
     # environment: testing
-    env:
-      NEXT_PUBLIC_APP_NAME: gha-pages 
-      NEXT_PUBLIC_PASSWORD: ${{secrets.PASSWORD}} 
+    # env:
+    #   NEXT_PUBLIC_APP_NAME: gha-pages 
+    #   NEXT_PUBLIC_PASSWORD: ${{secrets.PASSWORD}} 
 
     runs-on: self-hosted
 
@@ -41,7 +41,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: | 
-        npm ci --force
+        # npm ci --force
         npm run build
         pm2 stop npm
         pm2 start npm -- start
