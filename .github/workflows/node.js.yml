@@ -10,9 +10,9 @@ on:
 jobs:
   build:
     # environment: testing
-    # env:
-    #   NEXT_PUBLIC_APP_NAME: gha-pages 
-    #   NEXT_PUBLIC_PASSWORD: ${{secrets.PASSWORD}} 
+    env:
+      NEXT_PUBLIC_APP_NAME: gha-pages 
+      NEXT_PUBLIC_PASSWORD: ${{secrets.PASSWORD}} 
 
     runs-on: self-hosted
 
@@ -41,5 +41,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: | 
-        echo "working"
+        echo "$NEXT_PUBLIC_APP_NAME"
         
