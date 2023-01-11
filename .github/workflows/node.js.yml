@@ -41,8 +41,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: | 
+        npm ci
         npm run build
         pm2 stop npm
         pm2 start npm -- start
-        echo "$NEXT_PUBLIC_APP_NAME"
-        echo "$NEXT_PUBLIC_PASSWORD"
