@@ -11,8 +11,8 @@ jobs:
   build:
     # environment: testing
     env:
-      APP_NAME: gha-pages 
-      PASSWORD: ${{secrets.PASSWORD}} 
+      NEXT_PUBLIC_APP_NAME: gha-pages 
+      NEXT_PUBLIC_PASSWORD: ${{secrets.PASSWORD}} 
 
     runs-on: self-hosted
 
@@ -41,9 +41,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: | 
-        npm ci
+        # npm ci
         npm run build
         pm2 stop npm
         pm2 start npm -- start
-        echo "$APP_NAME"
-        echo "$PASSWORD"
+        echo "$NEXT_PUBLIC_APP_NAME"
+        echo "$NEXT_PUBLIC_PASSWORD"
