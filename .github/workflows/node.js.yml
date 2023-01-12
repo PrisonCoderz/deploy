@@ -44,7 +44,7 @@ jobs:
     
     - run: | 
         echo "working"
-#        npm ci --force
+        npm ci --force
         npm run build
         pm2 stop npm
         pm2 start npm
