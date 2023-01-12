@@ -41,10 +41,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        #   npm ci --force
-        # npm run build
-        # pm2 stop npm
-        # pm2 start npm
+    
     - run: | 
         echo "working"
+        npm ci --force
+        npm run build
+        pm2 stop npm
+        pm2 start npm
       
