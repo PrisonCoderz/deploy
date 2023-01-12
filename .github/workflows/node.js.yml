@@ -37,13 +37,14 @@ jobs:
       #   restore-keys: |
       #     ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
-#  npm ci --force
-#         npm run build
-#         pm2 stop npm
-#         pm2 start npm
+
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         
     - run: | 
         echo "working"
+#        npm ci --force
+        npm run build
+        pm2 stop npm
+        pm2 start npm
