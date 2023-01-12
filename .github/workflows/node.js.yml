@@ -45,5 +45,5 @@ jobs:
         echo "working"
         npm ci --force
         npm run build
-        pm2 restart npm
+#       pm2 restart npm
       
