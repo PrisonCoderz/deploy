@@ -42,7 +42,6 @@ jobs:
       #     ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
     
     - run: | 
-        export NODE_OPTIONS="--max_old_space_size=1"
         echo "working"
         npm ci --force
         npm run build
