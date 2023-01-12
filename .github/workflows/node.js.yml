@@ -42,7 +42,8 @@ jobs:
       #     ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
     
     - run: | 
+        echo "working"
         npm ci --force
         npm run build
-#       pm2 restart npm
+ #       pm2 restart npm
       
