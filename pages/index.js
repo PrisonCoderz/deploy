@@ -6,7 +6,7 @@ const Home = () => {
     const { publicRuntimeConfig } = getConfig()
     console.log(process.env.NEXT_PUBLIC_APP_NAME)
     // console.log(PASSWORD)
-    console.log(publicRuntimeConfig.PASSWORD)
+    console.log(publicRuntimeConfig)
     return (
         <div className='d-flex justify-content-center align-items-center'
             style={{ width: "100%", height: "100vh" }}
