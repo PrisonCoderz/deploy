@@ -9,8 +9,9 @@ on:
 
 jobs:
   build:
-    # environment: testing
+    environment: testing
     env:
+      NEXT_PUBLIC_ID: ${{vars.ID}}
       NEXT_PUBLIC_APP_NAME: gha-pages 
       NEXT_PUBLIC_PASSWORD: ${{secrets.PASSWORD}} 
 
