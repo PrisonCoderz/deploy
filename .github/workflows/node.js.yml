@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    environment: testing
+    # environment: testing
     env:
       NEXT_PUBLIC_ID: ${{vars.ID}}
       NEXT_PUBLIC_APP_NAME: gha-pages 
@@ -47,6 +47,6 @@ jobs:
         echo "working"
         npm ci --force
         npm run build
-        pm2 stop npm
-        pm2 start npm
+        pm2 stop 0
+        pm2 start 0
       
